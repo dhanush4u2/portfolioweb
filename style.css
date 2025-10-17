@@ -374,6 +374,108 @@ article .icon {
   cursor: default;
 }
 
+/* Revamped experience grid */
+.experience-section {
+  padding-bottom: 2rem;
+}
+
+.experience-grid {
+  display: grid;
+  /* Use 2 columns for a clean 2x2 layout on desktop */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.25rem;
+  margin-top: 2rem;
+  align-items: start;
+}
+
+.exp-card {
+  /* stronger card to stand out from background */
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  box-shadow: 0 10px 30px rgba(2,6,23,0.1);
+  border-radius: 14px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 240px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exp-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.exp-card h2 {
+  font-size: 1.25rem;
+  margin: 0;
+  color: #0b1220;
+}
+
+.exp-level {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.skills-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #f8fbff;
+  padding: 0.6rem 0.75rem;
+  border-radius: 10px;
+  border: 1px solid rgba(203, 213, 225, 0.6);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.skills-list li:hover {
+  background-color: #e3f2fd;
+  transform: scale(1.05);
+}
+
+.exp-card .icon {
+  height: 1.1rem;
+  opacity: 0.95;
+}
+
+/* Hover polish */
+.exp-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(2, 6, 23, 0.2);
+}
+
+/* Smooth entrance animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.exp-card {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.skills-list li {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
 /* PROJECTS SECTION */
 
 #projects {

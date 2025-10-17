@@ -101,3 +101,35 @@
     text-align: justify;
   }
 }
+
+/* Force 2x2 grid on wide screens and comfortable spacing */
+@media screen and (min-width: 1000px) {
+  .experience-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+  section {
+    margin: 0 8rem;
+  }
+}
+
+/* Extra responsiveness for experience grid */
+@media screen and (max-width: 1000px) {
+  .experience-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .exp-card {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  section {
+    margin: 0 4% !important;
+  }
+}
